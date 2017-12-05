@@ -9,11 +9,11 @@
 
     <!-- Hmm, what is the impact of web fonts on speed? Measure it... 
     <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-   
+   -->
    <link href="css/style.css" rel="stylesheet">
    
     
-   
+   <!--
     <link href="css/print.css" rel="stylesheet">
     -->
     <script>
@@ -76,14 +76,7 @@
         giftofspeed.href = 'http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css';
         giftofspeed.type = 'text/css';
         var godefer = document.getElementsByTagName('link')[0];
-        godefer.parentNode.insertBefore(giftofspeed, godefer);     
-          /* Second CSS File */
-          var giftofspeed2 = document.createElement('link');
-          giftofspeed2.rel = 'stylesheet';
-          giftofspeed2.href = 'css/style.css';
-          giftofspeed2.type = 'text/css';
-          var godefer2 = document.getElementsByTagName('link')[0];
-          godefer2.parentNode.insertBefore(giftofspeed2, godefer2);
+        godefer.parentNode.insertBefore(giftofspeed, godefer);
         </script>
       </footer>
     </div>
