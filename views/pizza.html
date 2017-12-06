@@ -212,10 +212,22 @@ pizzaSize {
     </div>
     <div id="footer" class="col-md-12">Thanks for visiting! &copy; 2014 Udacity</div>
   </div>
-
-  <!-- build:js /views/main.min.js -->
-  <script type="text/javascript" async src="js/main.js"></script>
-  <!-- endbuild -->
-</body>
  <link rel="stylesheet" href="css/bootstrap-grid.css">
+  <!-- build:js /views/main.min.js -->
+  <!--<script type="text/javascript" src="js/main.js"></script>-->
+  <!-- endbuild -->
+<script type="text/javascript">
+function downloadJSAtOnload() {
+var element = document.createElement("script");
+element.src = "js/main.js";
+document.body.appendChild(element);
+}
+if (window.addEventListener)
+window.addEventListener("load", downloadJSAtOnload, false);
+else if (window.attachEvent)
+window.attachEvent("onload", downloadJSAtOnload);
+else window.onload = downloadJSAtOnload;
+</script>
+</body>
+
 </html>
