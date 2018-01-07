@@ -189,8 +189,9 @@ var adjectives = ["dark", "color", "whimsical", "shiny", "noisy", "apocalyptic",
         console.log("Time to resize pizzas: " + i[i.length - 1].duration + "ms")
     };
 window.performance.mark("mark_start_generating");
+var pizzasDiv = document.getElementById("randomPizzas");
 for (var i = 2; 100 > i; i++) {
-    var pizzasDiv = document.getElementById("randomPizzas");
+    
     pizzasDiv.appendChild(pizzaElementGenerator(i))
 }
 window.performance.mark("mark_end_generating"), window.performance.measure("measure_pizza_generation", "mark_start_generating", "mark_end_generating");
