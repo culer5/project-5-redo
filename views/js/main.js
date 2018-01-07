@@ -178,10 +178,11 @@ var adjectives = ["dark", "color", "whimsical", "shiny", "noisy", "apocalyptic",
         }
 
         function n(e) {
-            for (var a = 0; a < document.getElementsByClassName("randomPizzaContainer").length; a++) {
-                var n = r(document.getElementsByClassName("randomPizzaContainer")[a], e),
+            var n = r(document.getElementsByClassName("randomPizzaContainer")[a], e),
                     i = document.getElementsByClassName("randomPizzaContainer")[a].offsetWidth + n + "px";
-                document.getElementsByClassName("randomPizzaContainer")[a].style.width = i
+            var randomPizzaContainer =  document.getElementsByClassName('randomPizzaContainer');
+            for (var a = 0; a < document.getElementsByClassName("randomPizzaContainer").length; a++) {
+                 randomPizzaContainer[a].style.width = i
             }
         }
         window.performance.mark("mark_start_resize"), a(e), n(e), window.performance.mark("mark_end_resize"), window.performance.measure("measure_pizza_resize", "mark_start_resize", "mark_end_resize");
