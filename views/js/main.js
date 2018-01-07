@@ -180,9 +180,9 @@ var adjectives = ["dark", "color", "whimsical", "shiny", "noisy", "apocalyptic",
         function n(e) {
             var n = r(document.getElementsByClassName("randomPizzaContainer")[a], e),
                     i = document.getElementsByClassName("randomPizzaContainer")[a].offsetWidth + n + "px";
-            var randomPizzaContainer =  document.getElementsByClassName('randomPizzaContainer');
+          //  var randomPizzaContainer =  document.getElementsByClassName('randomPizzaContainer');
             for (var a = 0; a < document.getElementsByClassName("randomPizzaContainer").length; a++) {
-                 randomPizzaContainer[a].style.width = i
+                 document.getElementsByClassName('randomPizzaContainer')[a].style.width = i
             }
         }
         window.performance.mark("mark_start_resize"), a(e), n(e), window.performance.mark("mark_end_resize"), window.performance.measure("measure_pizza_resize", "mark_start_resize", "mark_end_resize");
